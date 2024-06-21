@@ -1,54 +1,83 @@
-# Starlight Starter Kit: Basics
+![Hero section](/src/assets/hero.png)
+![Hero section](/src/assets/hero.png)
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+# API Documentation Site
 
-```
-npm create astro@latest -- --template starlight
-```
+This project is a documentation application built to document the Unsplash Photos API and the Rick and Morty API. The goal is to guide developers and business owners through the use cases and usgae of the APIs. This application is built using Astro, Starlight, and Tailwind CSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/starlight/tree/main/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/starlight/tree/main/examples/basics)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwithastro%2Fstarlight%2Ftree%2Fmain%2Fexamples%2Fbasics&project-name=my-starlight-docs&repository-name=my-starlight-docs)
+## Important Links
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Live site hosted on Netlify](https://docssite-starlight.netlify.app/)
+- [Google slides Presentation](https://....)
 
-## 🚀 Project Structure
+## Table of Contents
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Sections](#sections)
+- [Presentation](#presentation)
+- [Contributing](#contributing)
+- [License](#license)
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   ├── docs/
-│   │   └── config.ts
-│   └── env.d.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
-```
+## Project Overview
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+This project provides comprehensive documentation for the Unsplash Photos API and the Rick and Morty API. The documentation includes detailed descriptions of the major API endpoints, use cases, and example code snippets. The application features a responsive layout, making it accessible on various devices.
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+## Features
 
-Static assets, like favicons, can be placed in the `public/` directory.
+- **Detailed API Documentation**: Provides information on how to use the Unsplash and Rick and Morty APIs.
+- **Responsive Design**: Uses Tailwind CSS to ensure a responsive and modern user interface.
+- **Code Examples**: Includes example code snippets to help developers integrate the APIs into their applications.
+- **Download Links**: For Unsplash photos, direct download links are provided.
 
-## 🧞 Commands
+## Technologies Used
 
-All commands are run from the root of the project, from a terminal:
+- **Astro**: Static site generator for fast and optimized web applications.
+- **Starlight**: A documentation theme for Astro, used to create the structured and navigable documentation site.
+- **Tailwind CSS**: Utility-first CSS framework for styling the application.
+- **Unsplash API**: To fetch and display photos.
+- **Rick and Morty API**: To fetch and display information about characters, episodes, and locations from the Rick and Morty TV show.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Getting Started
 
-## 👀 Want to learn more?
+### Prerequisites
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+- Node.js (v14 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/FatumaA/docs-proj.git
+   cd api-documentation-site `
+
+   ```
+
+1. Install dependencies:
+
+   `npm install` or `yarn install`
+
+### Running the Development Server
+
+`npm run dev` or `yarn dev`
+
+Open http://localhost:4321 in your browser to see the application.
+
+## Sections
+
+- **Home Page**: Introduction to the project and links to various sections.
+- **Unsplash API Documentation**: Infrmation on how to use the Unsplash API, including endpoints and parameters.
+- **Rick and Morty API Documentation**: Information on how to use the Rick and Morty API, including endpoints and parameters.
+- **Example Pages**: Simple landing page consuming the APIs.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request with any improvements or new features.
+
+## License
+
+This project is licensed under the MIT License.
