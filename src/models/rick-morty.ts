@@ -1,3 +1,19 @@
+interface Origin {
+	name: string;
+}
+
+interface Location {
+	name: string;
+}
+
+interface Episode {
+	id: string;
+	name: string;
+	air_date: string;
+	episode: string;
+	created: string;
+}
+
 export interface Character {
 	id: string;
 	name: string;
@@ -5,31 +21,19 @@ export interface Character {
 	species: string;
 	type: string;
 	gender: string;
-	origin: {
-		name: string;
-		dimension: string;
-	};
-	location: {
-		name: string;
-		dimension: string;
-	};
+	origin: Origin;
+	location: Location;
 	image: string;
+	episode: Episode[];
 	created: string;
 }
 
-export interface Episode {
-	id: string;
-	name: string;
-	air_date: string;
-	episode: string;
-	created: string;
-	characters: Character[];
+export interface CharactersData {
+	results: Character[];
 }
 
-export interface EpisodeResponse {
+export interface APIResponse {
 	data: {
-		episodes: {
-			results: Episode[];
-		};
+		characters: CharactersData;
 	};
 }
