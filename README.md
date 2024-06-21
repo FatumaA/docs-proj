@@ -1,5 +1,5 @@
-![Hero section](/src/assets/hero.png)
-![Hero section](/src/assets/hero.png)
+![Hero section](/public/hero.png)
+![Hero section](/public/unsplash-exp.png)
 
 # API Documentation Site
 
