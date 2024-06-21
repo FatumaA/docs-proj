@@ -17,7 +17,9 @@ export default defineConfig({
 			},
 			customCss: [
 				// Path to your Tailwind base styles:
-				// "./src/tailwind.css",
+				"./src/tailwind.css",
+				"@fontsource/nunito-sans/400.css",
+				"@fontsource/nunito-sans/600.css",
 			],
 			sidebar: [
 				{
