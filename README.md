@@ -8,7 +8,7 @@ This project is a documentation application built to document the Unsplash Photo
 ## Important Links
 
 - [Live site hosted on Netlify](https://docssite-starlight.netlify.app/)
-- [Google slides Presentation](https://....)
+- [Google slides Presentation](https://docs.google.com/presentation/d/1KXCDy0y16HjRTi1fVh-LwKKkis6Hq7v9cL4e8mK_CRU/edit?usp=sharing)
 
 ## Table of Contents
 
