@@ -2,8 +2,8 @@
 import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
 import { Icon } from "astro-icon/components";
 import Image from "astro:assets";
-import { getAllCharactersQuery } from "../queries/get-episodes";
-import { type Character } from "../models/rick-morty";
+import { getAllCharactersQuery } from "../../queries/get-episodes";
+import { type Character } from "../../models/rick-morty";
 
 export const prerender = false;
 const response = await fetch("https://rickandmortyapi.com/graphql", {
