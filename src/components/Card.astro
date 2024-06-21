@@ -1,0 +1,22 @@
+---
+import { Icon } from "astro-icon/components";
+import Button from "../components/Button.astro";
+import { type UnsplashPhoto } from "../models/unsplash";
+import { type Character } from "../models/rick-morty";
+
+const { character, photo } = Astro.props;
+
+type Props = {
+	character?: Character;
+	photo?: UnsplashPhoto;
+} & ({ character: Character } | { photo: UnsplashPhoto });
+---
+
+<div class="border rounded-lg">
+	<img
+		src={photo ? photo.urls.small : character!.image}
+		alt={photo ? photo.alt_description : character!.name}
+		class="w-full h-64 object-contain rounded-lg"
+	/>
+	<slot />
+</div>
