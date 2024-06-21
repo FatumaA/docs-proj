@@ -5,9 +5,12 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: "My Docs",
+			title: "",
+			logo: {
+				src: "./src/assets/logo.png",
+			},
 			social: {
-				github: "https://github.com/withastro/starlight",
+				github: "https://github.com/FatumaA/docs-proj",
 			},
 			sidebar: [
 				{ label: "Overview", link: "/docs" },
