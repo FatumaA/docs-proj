@@ -1,6 +1,8 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { Icon } from "astro-icon/components";
 import Image from "astro:assets";
+import logo from "../assets/logo.png";
 import { getAllEpisodesQuery } from "../queries/get-episodes";
 import { type Episode, type Character } from "../models/rick-morty";
 
@@ -24,38 +26,47 @@ console.log("Third episode details:", results[2]);
 ---
 
 <MainLayout>
-	<div class="container mx-auto my-12 text-center text-justify-center">
-		<h1 class="text-3xl mb-12">Example Rick and Morty Page</h1>
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-			{
-				results.map((result: Episode) => (
-					<div class="flex flex-col gap-3 ">
-						{result.characters.map((char: Character) => (
-							<div class="border rounded-lg">
-								<img
-									src={char.image}
-									alt={char.name}
-									class="w-full h-64 object-cover rounded-lg"
-								/>
-								<div class=" p-2">
-									<div class="bg-green-200 rounded-md p-2 mb-2 text-xl">
-										<span class="font-bold">Episode name: </span>
-										<span>{result.name}</span>
+	<div class="container mx-auto my-1 text-center text-justify-center">
+		<a href="/" class="flex mr-auto">
+			<img
+				src="/src/assets/logo.png"
+				alt="logo"
+				class="w-40 h-40 object-contain"
+			/>
+			<a>
+				<h1 class="text-3xl mb-12">Example Rick and Morty Page</h1>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+					{
+						results.map((result: Episode) => (
+							<div class="flex flex-col gap-3 ">
+								{result.characters.map((char: Character) => (
+									<div class="border rounded-lg">
+										<img
+											src={char.image}
+											alt={char.name}
+											class="w-full h-64 object-cover rounded-lg"
+										/>
+										<div class=" p-2">
+											<div class="bg-green-200 rounded-md p-2 mb-2 text-xl">
+												<span class="font-bold">Episode name: </span>
+												<span>{result.name}</span>
+											</div>
+											<div>
+												<span>Details: </span>
+												<span class="  font-semibold">{result.episode}</span>
+											</div>
+											<div class="text-sm text-gray-600 mt-6">
+												<span class="">Aired on: </span>
+												<span> {result.air_date} </span>
+											</div>
+										</div>
 									</div>
-									<div>
-										<span>Details: </span>
-										<span class="  font-semibold">{result.episode}</span>
-									</div>
-									<div class="text-sm text-gray-600 mt-6">
-										<span class="">Aired on: </span>
-										<span> {result.air_date} </span>
-									</div>
-								</div>
+								))}
 							</div>
-						))}
-					</div>
-				))
-			}
-		</div>
-	</div>
-</MainLayout>
+						))
+					}
+				</div>
+			</a>
+		</a>
+	</div></MainLayout
+>
