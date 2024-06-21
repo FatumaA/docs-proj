@@ -37,12 +37,12 @@ export default defineConfig({
 						directory: "docs/guides",
 					},
 				},
-				{
-					label: "Reference",
-					autogenerate: {
-						directory: "docs/reference",
-					},
-				},
+				// {
+				// 	label: "Reference",
+				// 	autogenerate: {
+				// 		directory: "docs/reference",
+				// 	},
+				// },
 			],
 		}),
 		tailwind(),
