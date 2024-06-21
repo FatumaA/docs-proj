@@ -1,5 +1,5 @@
 ![Hero section](/public/hero.png)
-![Hero section](/public/unsplash-exp.png)
+![Unsplash example landing page](/public/unsplash-exp.png)
 
 # API Documentation Site
 
