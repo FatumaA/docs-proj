@@ -18,6 +18,7 @@ export default defineConfig({
 			customCss: [
 				// Path to your Tailwind base styles:
 				"./src/tailwind.css",
+				"./src/assets/landing.css",
 				"@fontsource/nunito-sans/400.css",
 				"@fontsource/nunito-sans/600.css",
 			],
