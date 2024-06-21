@@ -13,14 +13,13 @@ hero:
       variant: primary
 ---
 
-import { Card, LinkCard, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
 
 ## Next steps
 
-<CardGrid stagger>
+<CardGrid>
 	<LinkCard title="See the Rick and Morty API in action" description="Check out an example page that consumes the Rick and Morty API." href="/rick-morty-exp" />
 	<LinkCard title="See the Unsplash API in action" description="Check out an example page that consumes the Unsplash API." href="/unsplash-exp"/>
 	<LinkCard title="Learn more about Rick and Morty API" description="Read comprehensive documentation on the Rick and Morty API." href="/docs/guides/rick-and-morty" />
 	<LinkCard title="Learn more about Unsplash API" description="Read comprehensive documentation on the Unsplash API." href="/docs/guides/unsplash" />
-	
 </CardGrid>
