@@ -53,7 +53,7 @@ This project provides comprehensive documentation for the Unsplash Photos API an
 
    ```bash
    git clone https://github.com/FatumaA/docs-proj.git
-   cd api-documentation-site `
+   cd docs-proj
 
    ```
 
