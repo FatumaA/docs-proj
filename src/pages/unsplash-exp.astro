@@ -162,37 +162,35 @@ console.log(photoList);
 				alt="logo"
 				class="w-40 h-40 object-contain"
 			/>
-			<a>
-				<h1 class="text-3xl mb-12">Example Unsplash Page</h1>
-				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-					{
-						photoList.map((photo: UnsplashPhoto) => (
-							<div class="border rounded-lg ">
-								<img
-									src={photo.urls.small}
-									alt={photo.alt_description}
-									class="w-full h-64 object-cover rounded-lg"
-								/>
-								<div class="flex flex-row items-center justify-center gap-4 px-2">
-									<p class="mt-2">{photo.alt_description}</p>
-									<a
-										href={photo.links.download}
-										target="_blank"
-										rel="noopener noreferrer"
-										class="text-black"
-									>
-										<Icon
-											name="download"
-											size={24}
-											class=" cursor-pointer hover:bg-black hover:text-white hover:p-2 rounded-full"
-										/>
-									</a>
-								</div>
-							</div>
-						))
-					}
-				</div>
-			</a>
 		</a>
-	</div></MainLayout
->
+		<h1 class="text-3xl mb-12">Example Unsplash Page</h1>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+			{
+				photoList.map((photo: UnsplashPhoto) => (
+					<div class="border rounded-lg">
+						<img
+							src={photo.urls.small}
+							alt={photo.alt_description}
+							class="w-full h-64 object-cover rounded-lg"
+						/>
+						<div class="flex flex-row items-center justify-center gap-4 px-2">
+							<p class="mt-2">{photo.alt_description}</p>
+							<a
+								href={photo.links.download}
+								target="_blank"
+								rel="noopener noreferrer"
+								class="text-black"
+							>
+								<Icon
+									name="download"
+									size={24}
+									class=" cursor-pointer hover:bg-black hover:text-white hover:p-2 rounded-full"
+								/>
+							</a>
+						</div>
+					</div>
+				))
+			}
+		</div>
+	</div>
+</MainLayout>
