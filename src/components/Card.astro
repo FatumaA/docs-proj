@@ -1,23 +1,31 @@
 ---
 import { Icon } from "astro-icon/components";
 import { type UnsplashPhoto } from "../models/unsplash";
-import { type Character } from "../models/rick-morty";
+import { type Character, type Episode } from "../models/rick-morty";
 
-const { character, photo } = Astro.props;
+const { character, photo, episode } = Astro.props;
 
 type Props = {
+	episode?: Episode;
 	character?: Character;
 	photo?: UnsplashPhoto;
-} & ({ character: Character } | { photo: UnsplashPhoto });
+} & (
+	| { character: Character }
+	| { photo: UnsplashPhoto }
+	| { episode: Episode }
+);
 ---
 
 <div class="border rounded-lg flex flex-col h-fit">
-	<img
-		src={photo ? photo.urls.small : character!.image}
-		alt={photo ? photo.alt_description : character!.name}
-		class="max-h-48 min-h-48 w-full object-cover rounded-t-lg"
-	/>
-
+	{
+		!episode && (
+			<img
+				src={photo ? photo.urls.small : character!.image}
+				alt={photo ? photo.alt_description : character!.name}
+				class="max-h-48 min-h-48 w-full object-cover rounded-t-lg"
+			/>
+		)
+	}
 	<div class="flex flex-col justify-between p-4">
 		<slot />
 	</div>
