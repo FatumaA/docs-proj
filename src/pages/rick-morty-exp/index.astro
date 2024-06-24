@@ -4,7 +4,7 @@ import Image from "astro:assets";
 import Card from "../../components/Card.astro";
 import Button from "../../components/Button";
 import { BtnActions } from "../../components/Button";
-import { getAllCharactersQuery } from "../../queries/get-episodes";
+import { getAllCharactersQuery } from "../../queries/rickMortyQueries";
 import { type Character } from "../../models/rick-morty";
 
 export const prerender = false;
@@ -23,7 +23,7 @@ const {
 	},
 } = await response.json();
 
-console.log("First episode name:", results);
+console.log("First episode name:", results[0].name);
 ---
 
 <StarlightPage

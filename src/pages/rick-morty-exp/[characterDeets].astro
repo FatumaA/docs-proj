@@ -1,0 +1,106 @@
+---
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+import { getOneCharacterQuery } from "../../queries/rickMortyQueries";
+import {
+	type Episode,
+	type CharacterResponse,
+	type Character,
+} from "../../models/rick-morty";
+import Card from "../../components/Card.astro";
+
+export const prerender = false;
+
+const { characterDeets } = Astro.params;
+
+const response = await fetch("https://rickandmortyapi.com/graphql", {
+	method: "POST",
+	headers: { "Content-Type": "application/json" },
+	body: JSON.stringify({
+		query: getOneCharacterQuery,
+		variables: {
+			id: characterDeets,
+		},
+	}),
+});
+
+const {
+	data: {
+		character: {
+			name,
+			species,
+			status,
+			gender,
+			origin: { name: originName },
+			location: { name: locationName },
+			image,
+			episode,
+		},
+	},
+}: CharacterResponse = await response.json();
+console.log(name);
+---
+
+<StarlightPage
+	frontmatter={{
+		title: "Character details",
+		template: "splash",
+	}}
+>
+	<div class="flex flex-col gap-6">
+		<img
+			src={image}
+			alt={name}
+			class="flex-1 max-h-96 w-full object-cover rounded-t-lg"
+		/>
+		<div>
+			<h2 class="font-bold text-4xl">{name}</h2>
+			<div class="flex flex-col md:flex-row gap-1 md:gap-6">
+				<p>
+					<span class="font-bold">Species:</span>
+					<span> {species} </span>
+				</p>
+
+				<p>
+					<span class="font-bold">Status:</span>
+					<span>{status}</span>
+				</p>
+
+				<p>
+					<span class="font-bold">Gender:</span>
+					<span>{gender} </span>
+				</p>
+
+				<p>
+					<span class="font-bold">Origin:</span>
+					<span>{originName}</span>
+				</p>
+				<p>
+					<span class="font-bold">Location:</span>
+					<span>{locationName} </span>
+				</p>
+			</div>
+
+			<h3 class="font-bold text-2xl">Episodes they appeared in</h3>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+				{
+					episode.map((ep: Episode) => (
+						<Card episode={ep}>
+							{ep.url}
+							<span class="mb-3 text-lg font-extrabold">{ep.name}</span>
+							<span class="mb-1">Episode: {ep.episode}</span>
+							<span>Some characters starring in this episode: </span>
+							<div class="flex flex-col md:flex-row gap-4 mb-5">
+								{ep.characters.splice(0, 3).map((char: Character) => (
+									<a href={`/rick-morty-exp/${char.id}`}>{char.name}</a>
+								))}
+							</div>
+							<span class="text-xs ml-auto border-b-8 border-green-300 rounded-md">
+								Aired on: {ep.air_date}
+							</span>
+						</Card>
+					))
+				}
+			</div>
+		</div>
+	</div>
+</StarlightPage>
