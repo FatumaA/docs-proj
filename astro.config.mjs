@@ -2,11 +2,20 @@ import { defineConfig } from "astro/config";
 import netlify from "@astrojs/netlify";
 import starlight from "@astrojs/starlight";
 import tailwind from "@astrojs/tailwind";
-
 import icon from "astro-icon";
+import react from "@astrojs/react";
+
+import node from "@astrojs/node";
 
 // https://astro.build/config
 export default defineConfig({
+	image: {
+		remotePatterns: [
+			{
+				protocol: "https",
+			},
+		],
+	},
 	output: "hybrid",
 	adapter: netlify(),
 	integrations: [
@@ -47,5 +56,16 @@ export default defineConfig({
 		}),
 		tailwind(),
 		icon(),
+		react({
+			experimentalReactChildren: true,
+		}),
 	],
+	//   react({
+	//     experimentalReactChildren: true
+	//   })],
+	vite: {
+		ssr: {
+			noExternal: ["react-icons"],
+		},
+	},
 });
