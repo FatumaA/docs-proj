@@ -6,12 +6,13 @@ interface Location {
 	name: string;
 }
 
-interface Episode {
+export interface Episode {
 	id: string;
 	name: string;
 	air_date: string;
 	episode: string;
 	created: string;
+	characters: Character[];
 }
 
 export interface Character {
@@ -30,6 +31,12 @@ export interface Character {
 
 export interface CharactersData {
 	results: Character[];
+}
+
+export interface CharacterResponse {
+	data: {
+		character: Character;
+	};
 }
 
 export interface APIResponse {
