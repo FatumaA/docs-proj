@@ -44,7 +44,7 @@ const Button = ({
 		<button
 			id="btn"
 			type={type ?? "button"}
-			className="bg-green-300 hover:bg-green-200 text-black font-bold px-4 py-2 rounded-md cursor-pointer flex ml-auto items-center gap-2"
+			className="bg-green-300 hover:bg-green-200 text-black font-bold px-4 py-2 rounded-md cursor-pointer flex items-center gap-2 w-fit"
 			{...(type !== "submit" && { onClick: clickHandler })}
 		>
 			<span>{buttonText}</span>

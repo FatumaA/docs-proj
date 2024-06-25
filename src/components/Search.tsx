@@ -42,7 +42,7 @@ const Search = () => {
 					aria-roledescription="search"
 					type="text"
 					id="search"
-					placeholder="search your tasks..."
+					placeholder="search unsplash API for photos..."
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 					className={`bg-inherit w-5/6 border rounded-md p-2 focus:outline-none focus:ring-1 ${
@@ -56,7 +56,7 @@ const Search = () => {
 					buttonText={isSearching ? "Searching..." : "Search"}
 				/>
 			</form>
-			<span className="text-red-500 dark:text-red-300 font-medium mt-1">
+			<span className="text-start text-red-500 dark:text-red-300 font-medium mt-1">
 				{error}
 			</span>
 		</div>
