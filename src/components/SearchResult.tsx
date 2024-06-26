@@ -1,7 +1,7 @@
 import type { UnsplashPhoto } from "../models/unsplash";
 import Button, { BtnActions } from "./Button";
 
-const SearchResults = () => {
+const SearchResult = () => {
 	const searchRes = window.localStorage.getItem("photoResults");
 	const parsedSearchResults: UnsplashPhoto[] = JSON.parse(searchRes!);
 	return (
@@ -32,4 +32,4 @@ const SearchResults = () => {
 	);
 };
 
-export default SearchResults;
+export default SearchResult;
