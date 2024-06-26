@@ -1,0 +1,49 @@
+---
+title: Get one character
+---
+
+import { Code, Steps, Aside } from '@astrojs/starlight/components';
+
+
+export const resultingJSon =  `{
+  "data": {
+    "character": {
+      "name": "Rick Sanchez",
+      "status": "Alive",
+      "species": "Human",
+      "type": "",
+      "gender": "Male",
+      "origin": {
+        "name": "Earth (C-137)"
+      },
+      "location": {
+        "name": "Citadel of Ricks"
+      },
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "created": "2017-11-04T18:48:46.250Z"
+    }
+  }
+}
+`
+
+
+export const highlights = ['per_page'];
+
+To get a specific character from Rick and Morty API, construct your query like this:
+
+```bash
+curl -X POST \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "query": "query GetOneCharacterDeets($id: ID!) { character(id: $id) { name status species type gender origin { name } location { name } image created } }",
+    "variables": { "id": "YOUR_CHARACTER_ID_HERE" }
+  }' \
+  https://rickandmortyapi.com/graphql
+
+```
+
+<Aside> Remember to replace `YOUR_CHARACTER_ID_HERE` with the character id </Aside>
+
+The results will be a JSON object containing a results array. You can see an example of this below:
+
+<Code lang="json" title="results shape" code={resultingJSon} />
