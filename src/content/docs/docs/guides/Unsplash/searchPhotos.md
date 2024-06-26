@@ -1,3 +1,3 @@
 ---
-title: Search Photos
+title: Search photos
 ---

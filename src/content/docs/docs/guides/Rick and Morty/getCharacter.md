@@ -1,3 +1,3 @@
 ---
-title: Get One Character
+title: Get one character
 ---

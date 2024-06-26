@@ -1,3 +1,3 @@
 ---
-title: Get All Photos
+title: Get all photos
 ---

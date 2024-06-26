@@ -1,3 +1,3 @@
 ---
-title: Get One Episode
+title: Get one episode
 ---

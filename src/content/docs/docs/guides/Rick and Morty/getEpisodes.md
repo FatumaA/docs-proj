@@ -1,3 +1,3 @@
 ---
-title: Get All Episodes
+title: Get all episodes
 ---
