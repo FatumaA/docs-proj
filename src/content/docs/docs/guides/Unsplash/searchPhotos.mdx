@@ -1,0 +1,122 @@
+---
+title: Search photos
+---
+
+import { Code, Steps } from '@astrojs/starlight/components';
+
+export const searchResults = `
+[{
+  "id": "qFWy-p1_HU4",
+  "slug": "a-room-with-a-desk-chairs-and-a-lamp-qFWy-p1_HU4",
+  "alternative_slugs": {
+    "en": "a-room-with-a-desk-chairs-and-a-lamp-qFWy-p1_HU4",
+    "es": "una-habitacion-con-un-escritorio-sillas-y-una-lampara-qFWy-p1_HU4",
+    "ja": "机と椅子とランプのある部屋-qFWy-p1_HU4",
+    "fr": "une-piece-avec-un-bureau-des-chaises-et-une-lampe-qFWy-p1_HU4",
+    "it": "una-stanza-con-una-scrivania-sedie-e-una-lampada-qFWy-p1_HU4",
+    "ko": "책상-의자-램프가-있는-방-qFWy-p1_HU4",
+    "de": "ein-zimmer-mit-schreibtisch-stuhlen-und-einer-lampe-qFWy-p1_HU4",
+    "pt": "uma-sala-com-uma-secretaria-cadeiras-e-um-candeeiro-qFWy-p1_HU4"
+  },
+  "created_at": "2024-06-23T13:42:33Z",
+  "updated_at": "2024-06-26T15:11:24Z",
+  "promoted_at": "2024-06-26T13:51:55Z",
+  "width": 5477,
+  "height": 3651,
+  "color": "#c0c0c0",
+  "blur_hash": "LSKBO7x]NHNG~qV@RkWVo~s:jFxa",
+  "description": "For sale! Curated mid century & postmodern furniture. https://urban-vintage.ro/",
+  "alt_description": "A room with a desk, chairs, and a lamp",
+  "breadcrumbs": [],
+  "urls": {
+    "raw": "https://images.unsplash.com/photo-1719150016704-270c5a0deee4?ixid=M3w2MjQ5MDF8MHwxfGFsbHwxfHx8fHx8Mnx8MTcxOTQxNTQ0OXw&ixlib=rb-4.0.3",
+    "full": "https://images.unsplash.com/photo-1719150016704-270c5a0deee4?crop=entropy&cs=srgb&fm=jpg&ixid=M3w2MjQ5MDF8MHwxfGFsbHwxfHx8fHx8Mnx8MTcxOTQxNTQ0OXw&ixlib=rb-4.0.3&q=85",
+    "regular": "https://images.unsplash.com/photo-1719150016704-270c5a0deee4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjQ5MDF8MHwxfGFsbHwxfHx8fHx8Mnx8MTcxOTQxNTQ0OXw&ixlib=rb-4.0.3&q=80&w=1080",
+    "small": "https://images.unsplash.com/photo-1719150016704-270c5a0deee4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjQ5MDF8MHwxfGFsbHwxfHx8fHx8Mnx8MTcxOTQxNTQ0OXw&ixlib=rb-4.0.3&q=80&w=400",
+    "thumb": "https://images.unsplash.com/photo-1719150016704-270c5a0deee4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w2MjQ5MDF8MHwxfGFsbHwxfHx8fHx8Mnx8MTcxOTQxNTQ0OXw&ixlib=rb-4.0.3&q=80&w=200",
+    "small_s3": "https://s3.us-west-2.amazonaws.com/images.unsplash.com/small/photo-1719150016704-270c5a0deee4"
+  },
+  "links": {
+    "self": "https://api.unsplash.com/photos/a-room-with-a-desk-chairs-and-a-lamp-qFWy-p1_HU4",
+    "html": "https://unsplash.com/photos/a-room-with-a-desk-chairs-and-a-lamp-qFWy-p1_HU4",
+    "download": "https://unsplash.com/photos/qFWy-p1_HU4/download?ixid=M3w2MjQ5MDF8MHwxfGFsbHwxfHx8fHx8Mnx8MTcxOTQxNTQ0OXw",
+    "download_location": "https://api.unsplash.com/photos/qFWy-p1_HU4/download?ixid=M3w2MjQ5MDF8MHwxfGFsbHwxfHx8fHx8Mnx8MTcxOTQxNTQ0OXw"
+  },
+  "likes": 7,
+  "liked_by_user": false,
+  "current_user_collections": [],
+  "sponsorship": null,
+  "topic_submissions": {
+    "business-work": {
+      "status": "approved",
+      "approved_on": "2024-06-25T10:40:37Z"
+    }
+  },
+  "asset_type": "photo",
+  "user": {
+    "id": "tJ_FcPVXguI",
+    "updated_at": "2024-06-26T15:07:40Z",
+    "username": "urban_vintage",
+    "name": "Urban Vintage",
+    "first_name": "Urban Vintage",
+    "last_name": null,
+    "twitter_username": "dmqwe",
+    "portfolio_url": "https://urban-vintage.ro/",
+    "bio": "We sell curated vintage furniture and home decor.\r\nUse our objects or our space for set decoration.  https://urban-vintage.ro/",
+    "location": "Bucharest, Romania",
+    "links": {
+      "self": "https://api.unsplash.com/users/urban_vintage",
+      "html": "https://unsplash.com/@urban_vintage",
+      "photos": "https://api.unsplash.com/users/urban_vintage/photos",
+      "likes": "https://api.unsplash.com/users/urban_vintage/likes",
+      "portfolio": "https://api.unsplash.com/users/urban_vintage/portfolio",
+      "following": "https://api.unsplash.com/users/urban_vintage/following",
+      "followers": "https://api.unsplash.com/users/urban_vintage/followers"
+    },
+    "profile_image": {
+      "small": "https://images.unsplash.com/profile-1718048948374-5edc6bb23171image?ixlib=rb-4.0.3&crop=faces&fit=crop&w=32&h=32",
+      "medium": "https://images.unsplash.com/profile-1718048948374-5edc6bb23171image?ixlib=rb-4.0.3&crop=faces&fit=crop&w=64&h=64",
+      "large": "https://images.unsplash.com/profile-1718048948374-5edc6bb23171image?ixlib=rb-4.0.3&crop=faces&fit=crop&w=128&h=128"
+    },
+    "instagram_username": "urban_vintage.ro",
+    "total_collections": 0,
+    "total_likes": 176,
+    "total_photos": 106,
+    "total_promoted_photos": 52,
+    "total_illustrations": 0,
+    "total_promoted_illustrations": 0,
+    "accepted_tos": true,
+    "for_hire": true,
+    "social": {
+      "instagram_username": "urban_vintage.ro",
+      "portfolio_url": "https://urban-vintage.ro/",
+      "twitter_username": "dmqwe",
+      "paypal_email": null
+    }
+  }
+}]`
+
+export const highlights = ['query', 'per_page'];
+
+To search through the Unspalsh API photos, hit this endpoint:
+
+<Code code="GET /search/photos" />
+
+Construct your API call like this where `YOUR_ACCESS_KEY` is your Unsplash API access key and `searchTerm` is the search term you want to search for:
+
+<Code lang="bash" title="bash"  code="curl -X GET 'https://api.unsplash.com/search/photos?client_id=YOUR_ACCESS_KEY&query=searchTerm'" mark={highlights} />
+
+The results will be a JSON array of photos matching the search term. You can see an example of this below:
+
+<Code lang="json" title="search results" code={searchResults} />
+
+## Customise the result
+
+You can customise the resulting Json array by passing similar parameters as in [getting all photos](/docs/guides/unsplash/getphotos/#customise-the-result). For example, to get the only the first result object in the search results array, you can use customise the `per_page` parameter like this:
+
+<Code lang="bash" title="bash"  code="curl -X GET 'https://api.unsplash.com/photos?client_id=MCGA2kGy64QTB01CRM9d_LSu913Bf3vCVmOQddE2A08&per_page=1&query=beach'" mark={highlights} />
+
+
+## Further reading
+
+Read more on different ways you can use the Unsplash API, including getting random photos and creating photo collections over at the [official docs](https://unsplash.com/documentation).
