@@ -1,0 +1,98 @@
+---
+title: Get all characters
+---
+
+import { Code, Steps } from '@astrojs/starlight/components';
+
+
+export const resultingJSon =  `{
+  "data": {
+    "characters": {
+      "results": [
+        {
+          "id": "1",
+          "name": "Rick Sanchez",
+          "status": "Alive",
+          "species": "Human",
+          "type": "",
+          "gender": "Male",
+          "origin": {
+            "name": "Earth (C-137)"
+          },
+          "location": {
+            "name": "Citadel of Ricks"
+          },
+          "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+          "episode": [
+            {
+              "id": "1",
+              "name": "Pilot",
+              "air_date": "December 2, 2013",
+              "episode": "S01E01",
+              "created": "2017-11-10T12:56:33.798Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}`
+
+
+export const highlights = ['per_page'];
+
+To get a list of all characters from Rick and Morty API, construct your query like this:
+
+```bash
+curl -X POST \
+  -H 'Content-Type: application/json' \
+  -d '{"query": "query GetAllCharacters { characters { results { id name status species type gender origin { name } location { name } image episode { id name air_date episode created } created } } }"}' \
+  https://rickandmortyapi.com/graphql
+
+```
+
+
+
+The results will be a JSON object containing a results array. You can see an example of this below:
+
+<Code lang="json" title="results shape" code={resultingJSon} />
+
+## Customise the result
+
+You can customise the resulting Json array by passing the following parameters:
+
+<Steps>
+
+1. `name`
+
+    Filter by the given name.
+
+2. `status`
+
+	  Filter by the given status (alive, dead or unknown).
+
+3. `species`
+
+	Filter by the given species.
+
+4. `type`
+  
+    Filter by the given type.
+
+5. `gender`
+    
+    Filter by the given gender (`female`, `male`, `genderless` or `unknown`).
+
+</Steps>
+
+For example, to get only characters named "Rick", you can use customise the `name` parameter like this:
+
+```bash
+curl -X POST \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "query": "query GetAllCharacters { characters(filter:{name:\"Rick\"}) { results { id name status species type gender origin { name } location { name } image episode { id name air_date episode created } created } } }"
+  }' \
+  https://rickandmortyapi.com/graphql
+
+```
